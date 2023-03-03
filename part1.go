@@ -118,12 +118,12 @@ func main() {
 	// Добавление песен в плейлист
 	song1 := &Song{nameSong: "happy song 1", duration: 2 * time.Second}
 	song2 := &Song{nameSong: "sad song 2", duration: 3 * time.Second}
-	//song3 := &Song{nameSong: "rock song 3", duration: 4 * time.Second}
+	song3 := &Song{nameSong: "rock song 3", duration: 4 * time.Second}
 	//song4 := &Song{nameSong: "pop song 4", duration: 5 * time.Second}
 
 	pl.AddSong(song1)
 	pl.AddSong(song2)
-	//pl.AddSong(song3)
+	pl.AddSong(song3)
 	//pl.AddSong(song4)
 
 	//start our playlist
@@ -148,7 +148,7 @@ func main() {
 	pl.Prev()
 
 	//waiting for ... sec
-	time.Sleep(10 * time.Second)
+	time.Sleep(12 * time.Second)
 
 	//close
 	close(pl.playChannel)
